@@ -4,13 +4,14 @@
 }
 
 .ctaWrapper {
-  background: linear-gradient(135deg, #1C140C 0%, #2A1D12 100%);
+  background: linear-gradient(135deg, var(--color-navy-950) 0%, var(--color-navy-900) 100%);
   border-radius: var(--radius-2xl);
   padding: var(--space-10) var(--space-8);
-  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 24px 48px rgba(11, 14, 20, 0.3);
   color: var(--color-surface);
   position: relative;
   overflow: hidden;
+  border: 1px solid rgba(184, 134, 59, 0.15);
 }
 
 @media (min-width: 768px) {
@@ -216,7 +217,7 @@
 .select:focus,
 .textarea:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(80, 50, 24, 0.12);
+  box-shadow: 0 0 0 3px var(--color-accent-soft);
   background-color: var(--color-surface);
 }
 

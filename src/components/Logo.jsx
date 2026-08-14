@@ -2,7 +2,8 @@ import React from 'react';
 import styles from './Logo.module.css';
 
 /**
- * Sleek, minimal architectural logo combining letter 'A' with a refined roofline emblem.
+ * Architectural interlocking hairline 'A' monogram logo.
+ * Precision 1.5px stroke SVG emblem with optional signature gold rule on large variant.
  */
 export default function Logo({ size = 'medium', light = false }) {
   return (
@@ -14,17 +15,27 @@ export default function Logo({ size = 'medium', light = false }) {
         xmlns="http://www.w3.org/2000/svg"
         aria-hidden="true"
       >
-        {/* Minimalist Architectural 'A' Apex */}
+        {/* Interlocking hairline 'A' monogram with architectural apex */}
         <path
-          d="M16 4L4 26H9.5L16 13L22.5 26H28L16 4Z"
-          fill="currentColor"
+          d="M16 3L3 27H9.5L16 14L22.5 27H29L16 3Z"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinejoin="round"
+          fill="none"
         />
-        {/* Cantilever Horizontal Beam */}
-        <rect x="7" y="19" width="18" height="2.5" fill="currentColor" rx="1" />
+        <path
+          d="M8.5 19H23.5"
+          stroke="currentColor"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+        />
+        <circle cx="16" cy="9.5" r="1" fill="currentColor" />
       </svg>
+      
       <div className={styles.brandText}>
         <span className={styles.name}>AADHIRA</span>
         <span className={styles.sub}>BUILDCRAFT</span>
+        {size === 'large' && <span className={styles.accentRule} aria-hidden="true" />}
       </div>
     </div>
   );

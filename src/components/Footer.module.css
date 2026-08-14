@@ -1,7 +1,8 @@
 .footer {
-  background-color: var(--color-text-primary);
-  color: rgba(237, 232, 226, 0.8);
+  background-color: var(--color-navy-950);
+  color: rgba(245, 241, 232, 0.8);
   padding-block: var(--space-16) var(--space-8);
+  border-top: 1px solid rgba(184, 134, 59, 0.15);
 }
 
 .grid {

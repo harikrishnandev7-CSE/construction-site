@@ -109,11 +109,23 @@
   font-size: var(--text-caption);
   color: var(--color-text-muted);
   font-style: italic;
-  padding: var(--space-2) var(--space-3);
+  padding: 8px 12px;
   background-color: var(--color-surface-card);
   border-radius: var(--radius-sm);
-  border-left: 2px solid var(--color-accent);
+  border-left: 2.5px solid var(--color-accent);
   line-height: var(--leading-snug);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.worryQuote::before {
+  content: '“';
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  color: var(--color-accent);
+  line-height: 0;
+  margin-top: 4px;
 }
 
 .featureTitle {

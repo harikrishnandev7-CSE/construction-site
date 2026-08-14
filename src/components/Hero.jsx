@@ -74,6 +74,7 @@ export default function Hero() {
           }
         />
         <div className={styles.overlay} aria-hidden="true" />
+        <div className={styles.textBlockScrim} aria-hidden="true" />
         
         {/* Subtle Architectural Blueprint Line Grid Background */}
         <div className={styles.blueprintGrid} aria-hidden="true">

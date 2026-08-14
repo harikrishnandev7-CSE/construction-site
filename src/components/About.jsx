@@ -10,13 +10,18 @@ function StatItem({ stat, isActive }) {
   const count = useCountUp(stat.value, 1800, prefersReduced ? true : isActive);
 
   return (
-    <div className={styles.statItem}>
+    <motion.div
+      className={styles.statItem}
+      initial={{ opacity: 0, scale: 0.9 }}
+      animate={isActive ? { opacity: 1, scale: 1 } : {}}
+      transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+    >
       <span className={styles.statValue}>
         {count}
         {stat.suffix}
       </span>
       <span className={styles.statLabel}>{stat.label}</span>
-    </div>
+    </motion.div>
   );
 }
 

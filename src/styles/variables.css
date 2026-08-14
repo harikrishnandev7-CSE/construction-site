@@ -1,32 +1,44 @@
 /* =============================================================
-   AADHIRA BUILDCRAFT — DESIGN TOKEN SYSTEM
-   Edit this file to adjust colors, typography, and spacing
+   AADHIRA BUILDCRAFT — PREMIUM DESIGN TOKEN SYSTEM
+   Dark Navy/Charcoal Base + Warm Sand + Muted Gold Accent
    ============================================================= */
 
 :root {
-  /* ─── Color Palette ─── */
-  --color-bg-primary: #FAF7F2;
-  --color-bg-secondary: #EDE5D8;
-  --color-surface: #FFFFFF;
-  --color-surface-card: #F5EFE6;
-  --color-text-primary: #1A140E;
-  --color-text-muted: #4A4237;
-  --color-accent: #7A421D;
-  --color-accent-light: #9B5628;
-  --color-accent-hover: #5C3013;
-  --color-border: #D8CCBA;
-  --color-border-light: #EADFCF;
+  /* ─── Base Surfaces ─── */
+  --color-bg-primary: #FBF9F5;        /* Warm white base */
+  --color-bg-secondary: #F3EFE6;      /* Warm sand secondary */
+  --color-surface: #FFFFFF;           /* Pure white surface */
+  --color-surface-card: #F7F4EE;      /* Crisp subtle card surface */
+
+  /* ─── Ink Typography ─── */
+  --color-text-primary: #14161C;      /* Near-black navy-charcoal */
+  --color-text-muted: #565C6B;        /* Muted cool slate text */
+
+  /* ─── Dark Navy Base (Hero, Footer, CTA Panels) ─── */
+  --color-navy-950: #0B0E14;
+  --color-navy-900: #12151D;
+  --color-navy-800: #1B2029;
+
+  /* ─── Accent — Muted Gold (Used sparingly) ─── */
+  --color-accent: #B8863B;            /* Muted gold primary accent */
+  --color-accent-light: #D4A857;      /* Soft warm gold */
+  --color-accent-hover: #9C6F2C;      /* Rich dark gold hover */
+  --color-accent-soft: rgba(184, 134, 59, 0.12);
+
+  /* ─── Borders & Dividers ─── */
+  --color-border: #E4DFD3;
+  --color-border-light: #EDE9DD;
 
   /* Semantic overlays */
-  --color-overlay-dark: rgba(20, 14, 6, 0.55);
+  --color-overlay-dark: rgba(11, 14, 20, 0.75);
   --color-overlay-hero: linear-gradient(
-    120deg,
-    rgba(20, 14, 6, 0.72) 0%,
-    rgba(20, 14, 6, 0.45) 50%,
-    rgba(20, 14, 6, 0.18) 100%
+    135deg,
+    rgba(11, 14, 20, 0.88) 0%,
+    rgba(11, 14, 20, 0.65) 50%,
+    rgba(11, 14, 20, 0.35) 100%
   );
-  --color-glass-bg: rgba(255, 255, 255, 0.82);
-  --color-glass-border: rgba(200, 183, 167, 0.6);
+  --color-glass-bg: rgba(255, 255, 255, 0.85);
+  --color-glass-border: rgba(228, 223, 211, 0.6);
 
   /* ─── Typography ─── */
   --font-display: 'Fraunces', 'Playfair Display', Georgia, serif;
@@ -60,7 +72,7 @@
   /* Letter spacing */
   --tracking-tight: -0.02em;
   --tracking-normal: -0.01em;
-  --tracking-wide: 0.04em;
+  --tracking-wide: 0.03em;
   --tracking-wider: 0.08em;
   --tracking-widest: 0.14em;
 
@@ -83,6 +95,11 @@
   --section-py: clamp(4rem, 8vw, 7rem);
   --section-px: clamp(1.25rem, 5vw, 4rem);
 
+  /* Layout */
+  --container-max: 1240px;
+  --container-wide: 1360px;
+  --nav-height: 80px;
+
   /* ─── Border Radius ─── */
   --radius-sm: 6px;
   --radius-md: 8px;
@@ -92,34 +109,29 @@
   --radius-full: 9999px;
 
   /* ─── Shadows ─── */
-  --shadow-xs: 0 1px 3px rgba(36, 32, 21, 0.06);
-  --shadow-sm: 0 2px 8px rgba(36, 32, 21, 0.08), 0 1px 3px rgba(36, 32, 21, 0.04);
-  --shadow-md: 0 4px 20px rgba(36, 32, 21, 0.10), 0 2px 6px rgba(36, 32, 21, 0.05);
-  --shadow-lg: 0 8px 40px rgba(36, 32, 21, 0.12), 0 4px 12px rgba(36, 32, 21, 0.06);
-  --shadow-xl: 0 16px 60px rgba(36, 32, 21, 0.15), 0 6px 20px rgba(36, 32, 21, 0.08);
-  --shadow-card-hover: 0 12px 48px rgba(80, 50, 24, 0.18), 0 4px 12px rgba(80, 50, 24, 0.10);
+  --shadow-xs: 0 1px 3px rgba(11, 14, 20, 0.05);
+  --shadow-sm: 0 2px 8px rgba(11, 14, 20, 0.06), 0 1px 3px rgba(11, 14, 20, 0.04);
+  --shadow-md: 0 4px 20px rgba(11, 14, 20, 0.08), 0 2px 6px rgba(11, 14, 20, 0.04);
+  --shadow-lg: 0 8px 40px rgba(11, 14, 20, 0.10), 0 4px 12px rgba(11, 14, 20, 0.05);
+  --shadow-xl: 0 16px 60px rgba(11, 14, 20, 0.14), 0 6px 20px rgba(11, 14, 20, 0.07);
+  --shadow-card-hover: 0 12px 36px rgba(184, 134, 59, 0.12), 0 4px 12px rgba(11, 14, 20, 0.06);
 
   /* ─── Transitions ─── */
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-in-out-quart: cubic-bezier(0.77, 0, 0.18, 1);
   --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
   --duration-fast: 180ms;
-  --duration-base: 280ms;
-  --duration-slow: 480ms;
+  --duration-base: 300ms;
+  --duration-slow: 500ms;
   --duration-slower: 700ms;
 
-  /* ─── Layout ─── */
-  --container-max: 1320px;
-  --container-wide: 1520px;
-  --nav-height: 80px;
-
-  /* ─── Z-index stack ─── */
-  --z-base: 1;
-  --z-raised: 10;
-  --z-dropdown: 100;
-  --z-sticky: 200;
-  --z-overlay: 500;
-  --z-modal: 600;
-  --z-toast: 700;
-  --z-whatsapp: 800;
+  /* Z-index layers */
+  --z-negative: -1;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-sticky: 100;
+  --z-header: 200;
+  --z-drawer: 300;
+  --z-modal: 400;
+  --z-toast: 500;
 }

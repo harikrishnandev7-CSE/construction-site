@@ -109,36 +109,48 @@ export default function Testimonials() {
             </motion.div>
           </AnimatePresence>
 
-          {/* Controls */}
-          <div className={styles.controls}>
-            <button
-              className={styles.controlBtn}
-              onClick={prev}
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft size={20} />
-            </button>
-
-            <div className={styles.dots} role="tablist" aria-label="Testimonial navigation">
-              {testimonials.map((_, i) => (
-                <button
-                  key={i}
-                  role="tab"
-                  className={`${styles.dot} ${i === current ? styles.dotActive : ''}`}
-                  onClick={() => go(i)}
-                  aria-label={`Go to testimonial ${i + 1}`}
-                  aria-selected={i === current}
-                />
-              ))}
+          {/* Controls with Auto-advance Progress Line */}
+          <div className={styles.controlsWrap}>
+            <div className={styles.progressBarTrack} aria-hidden="true">
+              <motion.div
+                key={current}
+                className={styles.progressBarFill}
+                initial={{ width: '0%' }}
+                animate={{ width: isHovered || prefersReduced ? '0%' : '100%' }}
+                transition={{ duration: 5.5, ease: 'linear' }}
+              />
             </div>
+            
+            <div className={styles.controls}>
+              <button
+                className={styles.controlBtn}
+                onClick={prev}
+                aria-label="Previous testimonial"
+              >
+                <ChevronLeft size={20} />
+              </button>
 
-            <button
-              className={styles.controlBtn}
-              onClick={next}
-              aria-label="Next testimonial"
-            >
-              <ChevronRight size={20} />
-            </button>
+              <div className={styles.dots} role="tablist" aria-label="Testimonial navigation">
+                {testimonials.map((_, i) => (
+                  <button
+                    key={i}
+                    role="tab"
+                    className={`${styles.dot} ${i === current ? styles.dotActive : ''}`}
+                    onClick={() => go(i)}
+                    aria-label={`Go to testimonial ${i + 1}`}
+                    aria-selected={i === current}
+                  />
+                ))}
+              </div>
+
+              <button
+                className={styles.controlBtn}
+                onClick={next}
+                aria-label="Next testimonial"
+              >
+                <ChevronRight size={20} />
+              </button>
+            </div>
           </div>
         </div>
       </div>

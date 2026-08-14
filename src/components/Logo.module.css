@@ -23,13 +23,14 @@
   display: flex;
   flex-direction: column;
   line-height: 1;
+  position: relative;
 }
 
 .name {
   font-family: var(--font-display);
   font-size: 1.05rem;
-  font-weight: var(--weight-bold);
-  letter-spacing: 0.05em;
+  font-weight: 400;
+  letter-spacing: 0.03em;
   color: inherit;
 }
 
@@ -41,6 +42,15 @@
   color: var(--color-text-muted);
   text-transform: uppercase;
   margin-top: 2px;
+}
+
+.accentRule {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-accent);
+  margin-top: 6px;
+  border-radius: 1px;
 }
 
 /* Variants */
@@ -60,15 +70,15 @@
   height: 36px;
 }
 .large .name {
-  font-size: 1.2rem;
+  font-size: 1.25rem;
 }
 
 .light {
-  color: var(--color-surface);
+  color: #F5F1E8;
 }
 .light .mark {
-  color: var(--color-surface);
+  color: var(--color-accent);
 }
 .light .sub {
-  color: rgba(255, 255, 255, 0.75);
+  color: rgba(245, 241, 232, 0.7);
 }

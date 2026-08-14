@@ -1,14 +1,15 @@
 .process {
   background-color: var(--color-surface);
+  padding-bottom: var(--space-6) !important;
 }
 
 .header {
   max-width: 600px;
-  margin-bottom: var(--space-16);
+  margin-bottom: var(--space-8);
 }
 
 .subheading {
-  margin-top: var(--space-4);
+  margin-top: var(--space-3);
   color: var(--color-text-muted);
   font-size: var(--text-body-lg);
   line-height: var(--leading-relaxed);
@@ -19,8 +20,8 @@
   display: none;
   position: relative;
   grid-template-columns: repeat(5, 1fr);
-  gap: var(--space-6);
-  padding-top: var(--space-10);
+  gap: var(--space-5);
+  padding-top: var(--space-4);
 }
 
 @media (min-width: 900px) {

@@ -42,10 +42,9 @@ const steps = [
 
 export default function ProcessTimeline() {
   const ref = useRef(null);
-  const inView = useInView(ref, { once: true, margin: '-80px' });
-
+  const inView = useInView(ref, { once: true, margin: '0px' });
   const headerRef = useRef(null);
-  const headerInView = useInView(headerRef, { once: true, margin: '-60px' });
+  const headerInView = useInView(headerRef, { once: true, margin: '0px' });
 
   return (
     <section id="process" className={`section ${styles.process}`} aria-labelledby="process-heading">

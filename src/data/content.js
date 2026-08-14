@@ -38,7 +38,7 @@ export const nav = {
   links: [
     { label: 'Home', href: '/', type: 'route' },
     { label: 'Services', href: '#services', type: 'scroll' },
-    { label: 'How It Works', href: '#process', type: 'scroll' },
+    { label: 'Timelapse', href: '#timelapse', type: 'scroll' },
     { label: 'Designs', href: '#designs', type: 'scroll' },
     { label: 'Projects', href: '/projects', type: 'route' },
     { label: 'Contact', href: '#consultation', type: 'scroll' },

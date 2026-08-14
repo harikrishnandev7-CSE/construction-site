@@ -214,7 +214,7 @@ function DesignModal({ design, onClose }) {
 export default function DesignGallery() {
   const [openDesign, setOpenDesign] = useState(null);
   const headerRef = useRef(null);
-  const headerInView = useInView(headerRef, { once: true, margin: '-60px' });
+  const headerInView = useInView(headerRef, { once: true, margin: '0px' });
 
   const handleOpen = useCallback((design) => setOpenDesign(design), []);
   const handleClose = useCallback(() => setOpenDesign(null), []);

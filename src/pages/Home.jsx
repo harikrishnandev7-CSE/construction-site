@@ -3,7 +3,7 @@ import Hero from '../components/Hero';
 import TrustBar from '../components/TrustBar';
 import About from '../components/About';
 import Services from '../components/Services';
-import ProcessTimeline from '../components/ProcessTimeline';
+import ConstructionTimelapse from '../components/ConstructionTimelapse';
 import DesignGallery from '../components/DesignGallery';
 import WhyChooseUs from '../components/WhyChooseUs';
 import Projects from '../components/Projects';
@@ -21,7 +21,7 @@ export default function Home() {
         <TrustBar />
         <About />
         <Services />
-        <ProcessTimeline />
+        <ConstructionTimelapse />
         <DesignGallery />
         <WhyChooseUs />
         <Projects />

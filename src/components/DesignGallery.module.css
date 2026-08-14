@@ -241,6 +241,24 @@
   overflow-y: auto;
 }
 
+@media (max-width: 600px) {
+  .modalOverlay {
+    padding: var(--space-2);
+  }
+
+  .modalContent {
+    padding: var(--space-5) var(--space-4);
+    gap: var(--space-4);
+  }
+
+  .modalClose {
+    top: 10px;
+    right: 10px;
+    width: 36px;
+    height: 36px;
+  }
+}
+
 .modalStyle {
   font-size: var(--text-caption);
   font-weight: var(--weight-semibold);

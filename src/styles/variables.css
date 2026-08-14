@@ -19,11 +19,12 @@
   --color-navy-900: #12151D;
   --color-navy-800: #1B2029;
 
-  /* ─── Accent — Muted Gold (Used sparingly) ─── */
-  --color-accent: #B8863B;            /* Muted gold primary accent */
-  --color-accent-light: #D4A857;      /* Soft warm gold */
-  --color-accent-hover: #9C6F2C;      /* Rich dark gold hover */
-  --color-accent-soft: rgba(184, 134, 59, 0.12);
+  /* ─── Accent — Warm Clay-Brown (Grounded Construction Industry Tone) ─── */
+  --color-accent: #8C5A3C;            /* warm clay-brown, primary accent */
+  --color-accent-light: #A97A54;      /* soft warm brown */
+  --color-accent-hover: #6E4429;      /* rich dark brown hover state */
+  --color-accent-soft: rgba(140, 90, 60, 0.12);
+  --color-accent-border: rgba(140, 90, 60, 0.5);
 
   /* ─── Borders & Dividers ─── */
   --color-border: #E4DFD3;
@@ -101,11 +102,11 @@
   --nav-height: 80px;
 
   /* ─── Border Radius ─── */
-  --radius-sm: 6px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --radius-xl: 16px;
-  --radius-2xl: 20px;
+  --radius-sm: 4px;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --radius-xl: 10px;
+  --radius-2xl: 12px;
   --radius-full: 9999px;
 
   /* ─── Shadows ─── */

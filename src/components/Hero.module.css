@@ -15,35 +15,45 @@
   z-index: 1;
 }
 
-.bgImage {
+.videoWrapper {
   width: 100%;
   height: 100%;
-  background-size: cover;
-  background-position: center 30%;
-  filter: brightness(0.9) contrast(1.05);
 }
 
-/* Global Dark Gradient Overlay */
+.bgVideo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  filter: brightness(1.02) contrast(1.05);
+  display: block;
+}
+
+.fallbackImage {
+  display: none;
+}
+
+/* Global Dark Gradient Overlay — Lightened to boost video visibility */
 .overlay {
   position: absolute;
   inset: 0;
   background: linear-gradient(
     135deg,
-    rgba(11, 14, 20, 0.82) 0%,
-    rgba(11, 14, 20, 0.55) 50%,
-    rgba(11, 14, 20, 0.25) 100%
+    rgba(11, 14, 20, 0.45) 0%,
+    rgba(11, 14, 20, 0.25) 50%,
+    rgba(11, 14, 20, 0.1) 100%
   );
 }
 
-/* Dedicated Scrim Specifically Behind the Left Text Block for Guaranteed Contrast */
+/* Dedicated Scrim Behind Left Text Block */
 .textBlockScrim {
   position: absolute;
   inset: 0;
   background: radial-gradient(
-    ellipse at 20% 50%,
-    rgba(11, 14, 20, 0.88) 0%,
-    rgba(11, 14, 20, 0.5) 55%,
-    transparent 80%
+    ellipse at 25% 50%,
+    rgba(11, 14, 20, 0.55) 0%,
+    rgba(11, 14, 20, 0.2) 50%,
+    transparent 75%
   );
   pointer-events: none;
 }
@@ -60,28 +70,20 @@
   position: relative;
   z-index: 2;
   width: 100%;
-  max-width: var(--container-width);
+  max-width: var(--container-max);
   margin-inline: auto;
   padding-inline: var(--section-px);
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: var(--space-8);
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media (min-width: 992px) {
-  .content {
-    grid-template-columns: 1.3fr 0.7fr;
-    gap: var(--space-8);
-  }
-}
-
-/* Left Column */
+/* Text Block */
 .textBlock {
   display: flex;
   flex-direction: column;
   gap: var(--space-4);
-  max-width: 620px;
+  max-width: 800px;
   position: relative;
   z-index: 3;
 }

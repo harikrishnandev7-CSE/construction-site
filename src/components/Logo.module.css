@@ -1,0 +1,74 @@
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  user-select: none;
+}
+
+.mark {
+  width: 28px;
+  height: 28px;
+  color: var(--color-accent);
+  flex-shrink: 0;
+  transition: transform var(--duration-fast) var(--ease-smooth);
+}
+
+.logoWrap:hover .mark {
+  transform: translateY(-1px);
+}
+
+.brandText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.name {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: 0.05em;
+  color: inherit;
+}
+
+.sub {
+  font-family: var(--font-body);
+  font-size: 0.58rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.22em;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+
+/* Variants */
+.small .mark {
+  width: 24px;
+  height: 24px;
+}
+.small .name {
+  font-size: 0.9rem;
+}
+.small .sub {
+  font-size: 0.5rem;
+}
+
+.large .mark {
+  width: 36px;
+  height: 36px;
+}
+.large .name {
+  font-size: 1.2rem;
+}
+
+.light {
+  color: var(--color-surface);
+}
+.light .mark {
+  color: var(--color-surface);
+}
+.light .sub {
+  color: rgba(255, 255, 255, 0.75);
+}

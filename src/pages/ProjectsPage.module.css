@@ -1,0 +1,19 @@
+.pageHero {
+  background-color: var(--color-bg-primary);
+  padding-top: calc(var(--nav-height) + var(--space-16));
+  padding-bottom: var(--space-8);
+}
+
+.pageHeroContent {
+  max-width: 680px;
+}
+
+.pageTitle {
+  margin-bottom: var(--space-5);
+}
+
+.pageSubtitle {
+  color: var(--color-text-muted);
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-relaxed);
+}

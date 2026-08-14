@@ -1,0 +1,79 @@
+.button {
+  position: fixed;
+  bottom: var(--space-6);
+  right: var(--space-6);
+  z-index: var(--z-whatsapp);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background-color: #25D366;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45), 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-decoration: none;
+  transition: transform var(--duration-base) var(--ease-smooth),
+              box-shadow var(--duration-base) var(--ease-smooth);
+  animation: pulseGlow 2.5s ease-in-out infinite;
+}
+
+.button:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 28px rgba(37, 211, 102, 0.6), 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.button:focus-visible {
+  outline: 3px solid #25D366;
+  outline-offset: 4px;
+}
+
+/* Tooltip */
+.tooltip {
+  position: absolute;
+  right: calc(100% + 12px);
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--color-text-primary);
+  color: var(--color-surface);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  padding: 5px 10px;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--duration-fast);
+}
+
+.tooltip::after {
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-left-color: var(--color-text-primary);
+}
+
+.button:hover .tooltip {
+  opacity: 1;
+}
+
+@keyframes pulseGlow {
+  0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45), 0 2px 8px rgba(0, 0, 0, 0.15); }
+  50% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.45), 0 0 0 10px rgba(37, 211, 102, 0.08), 0 2px 8px rgba(0, 0, 0, 0.15); }
+}
+
+@media (max-width: 480px) {
+  .button {
+    bottom: var(--space-4);
+    right: var(--space-4);
+    width: 52px;
+    height: 52px;
+  }
+
+  .tooltip {
+    display: none;
+  }
+}

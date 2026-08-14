@@ -1,0 +1,188 @@
+.process {
+  background-color: var(--color-surface);
+}
+
+.header {
+  max-width: 600px;
+  margin-bottom: var(--space-16);
+}
+
+.subheading {
+  margin-top: var(--space-4);
+  color: var(--color-text-muted);
+  font-size: var(--text-body-lg);
+  line-height: var(--leading-relaxed);
+}
+
+/* ─── Desktop Timeline ─── */
+.desktopTimeline {
+  display: none;
+  position: relative;
+  grid-template-columns: repeat(5, 1fr);
+  gap: var(--space-6);
+  padding-top: var(--space-10);
+}
+
+@media (min-width: 900px) {
+  .desktopTimeline {
+    display: grid;
+  }
+}
+
+.lineTrack {
+  position: absolute;
+  top: var(--space-10);
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background-color: var(--color-border-light);
+  transform: translateY(-50%);
+  z-index: 1;
+}
+
+.lineFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--color-accent), var(--color-accent-light));
+  transform-origin: left;
+}
+
+.step {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.stepDotWrap {
+  margin-bottom: var(--space-6);
+  padding: 4px;
+  background-color: var(--color-surface);
+  border-radius: 50%;
+}
+
+.stepDot {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-accent);
+  box-shadow: 0 4px 12px rgba(80, 50, 24, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform var(--duration-fast), background-color var(--duration-fast);
+}
+
+.step:hover .stepDot {
+  transform: scale(1.1);
+  background-color: var(--color-accent);
+}
+
+.stepNumber {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: var(--weight-bold);
+  color: var(--color-accent);
+  transition: color var(--duration-fast);
+}
+
+.step:hover .stepNumber {
+  color: var(--color-surface);
+}
+
+.stepContent {
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+  transition: box-shadow var(--duration-fast), border-color var(--duration-fast);
+}
+
+.step:hover .stepContent {
+  box-shadow: var(--shadow-md);
+  border-color: var(--color-border);
+}
+
+.stepTitle {
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: var(--weight-semibold);
+  color: var(--color-text-primary);
+  line-height: 1.3;
+}
+
+.stepDesc {
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+  line-height: var(--leading-relaxed);
+}
+
+/* ─── Mobile Timeline ─── */
+.mobileTimeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+@media (min-width: 900px) {
+  .mobileTimeline {
+    display: none;
+  }
+}
+
+.mobileStep {
+  display: flex;
+  gap: var(--space-5);
+  padding-bottom: var(--space-8);
+}
+
+.mobileStepLeft {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.mobileDot {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(80, 50, 24, 0.1);
+  z-index: 2;
+}
+
+.mobileDotNumber {
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: var(--weight-bold);
+  color: var(--color-accent);
+}
+
+.mobileConnector {
+  width: 2px;
+  flex: 1;
+  background: var(--color-accent);
+  margin-top: 4px;
+}
+
+.mobileStepContent {
+  background: var(--color-surface-card);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}

@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useRef } from 'react';
 import { motion, useInView } from 'framer-motion';
 import { about } from '../data/content';
 import { useCountUp } from '../hooks/useCountUp';

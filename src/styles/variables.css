@@ -19,12 +19,12 @@
   --color-navy-900: #12151D;
   --color-navy-800: #1B2029;
 
-  /* ─── Accent — Warm Clay-Brown (Grounded Construction Industry Tone) ─── */
-  --color-accent: #8C5A3C;            /* warm clay-brown, primary accent */
-  --color-accent-light: #A97A54;      /* soft warm brown */
-  --color-accent-hover: #6E4429;      /* rich dark brown hover state */
-  --color-accent-soft: rgba(140, 90, 60, 0.12);
-  --color-accent-border: rgba(140, 90, 60, 0.5);
+  /* ─── Accent — Rich Warm Copper & Golden Amber ─── */
+  --color-accent: #B86637;            /* rich warm copper-brown, primary accent */
+  --color-accent-light: #E69A48;      /* vibrant warm golden amber */
+  --color-accent-hover: #9E5227;      /* deep warm brown hover state */
+  --color-accent-soft: rgba(184, 102, 55, 0.14);
+  --color-accent-border: rgba(230, 154, 72, 0.5);
 
   /* ─── Borders & Dividers ─── */
   --color-border: #E4DFD3;
@@ -132,6 +132,7 @@
   --z-tooltip: 10;
   --z-sticky: 100;
   --z-header: 200;
+  --z-whatsapp: 250;
   --z-drawer: 300;
   --z-modal: 400;
   --z-toast: 500;

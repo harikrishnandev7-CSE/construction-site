@@ -1,6 +1,6 @@
 .button {
   position: fixed;
-  bottom: var(--space-6);
+  bottom: max(var(--space-6), calc(var(--space-6) + env(safe-area-inset-bottom)));
   right: var(--space-6);
   z-index: var(--z-whatsapp);
   width: 58px;
@@ -67,7 +67,7 @@
 
 @media (max-width: 480px) {
   .button {
-    bottom: var(--space-4);
+    bottom: max(var(--space-4), calc(var(--space-4) + env(safe-area-inset-bottom)));
     right: var(--space-4);
     width: 52px;
     height: 52px;
